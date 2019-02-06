@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/new-age.scss';
+header.masthead {
+    position: relative;
+
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    color: white;
+   
+}
+
+$purple-plum : #9b3cb7;
+$infra-red: #ff396f;
+$midnight-blue:#1a2a6c;
+$firebrick: #b21f1f;
+
+.gradiente-1 {
+    background: url('assets/img/bg-pattern.png'), $purple-plum!important;
+    background: url('assets/img/bg-pattern.png'), -webkit-linear-gradient(to left, $purple-plum, $infra-red)!important;
+    background: url('assets/img/bg-pattern.png'), linear-gradient(to left, $purple-plum, $infra-red)!important;
+}
+.gradiente-2 {
+    background: url('assets/img/bg-pattern.png'), $midnight-blue!important;
+    background: url('assets/img/bg-pattern.png'), -webkit-linear-gradient(to left, $midnight-blue, $firebrick)!important;
+    background: url('assets/img/bg-pattern.png'), linear-gradient(to left, $midnight-blue, $firebrick)!important;
+}
