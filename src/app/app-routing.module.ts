@@ -7,8 +7,9 @@ import { LoaderComponent } from './component/loader/loader.component';
 
 
 const routes: Route[] = [
-    { path: 'u/:routeParam', component: LandingComponent },
+    { path: 'u/:id', component: LandingComponent },
     { path: 'loader', component: LoaderComponent },
+    { path: '404', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent },
 
 ];
