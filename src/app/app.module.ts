@@ -10,13 +10,15 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingComponent } from './component/landing/landing.component';
 import { LoaderComponent } from './component/loader/loader.component';
+import { StickyElementDirective } from './sticky-element.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
     LandingComponent,
-    LoaderComponent
+    LoaderComponent,
+    StickyElementDirective
   ],
   imports: [
     BrowserModule,

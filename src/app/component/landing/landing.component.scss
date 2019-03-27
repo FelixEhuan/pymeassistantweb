@@ -1,0 +1,28 @@
+.active{
+    border-bottom: 2px solid #628ec4 !important;
+}
+
+
+div.pyme {
+    // background: rgba(255,255,255,0.6); /* Old browsers */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 12px;
+      margin: 0;
+    }
+    img {
+      height: 50px;
+      width: auto;
+      text-align: center;
+    }
+    // margin-top:3.125rem;
+    padding: 10px;
+  }
+
+    .transparent{
+      background:none;
+      
+    }
+ 

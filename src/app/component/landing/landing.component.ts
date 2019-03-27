@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Router,ActivatedRoute } from '@angular/router';
@@ -19,6 +19,14 @@ export class LandingComponent implements OnInit {
   cta: any;
   show = false;
   fireRoute: string;
+
+  @ViewChild('home_li') homeLi: ElementRef;
+  @ViewChild('descargar_li') descargarLi: ElementRef;
+  @ViewChild('servicios_li') serviciosLi: ElementRef;
+  @ViewChild('contact_li') contactLi: ElementRef;
+  @ViewChild('navbar_li') buttonmenu: ElementRef;
+
+
   constructor(private afs: AngularFirestore,private router: Router, private routes: ActivatedRoute) {
   // this.itemsDoc = this.afs.doc<any>('users/weGKw6OIJfbqez10aaC4');
   }
@@ -43,5 +51,46 @@ export class LandingComponent implements OnInit {
     });
   });
   }
+
+  scrollToElement($element, activeElement: string): void {
+    this.buttonmenu.nativeElement.click();
+    $element.scrollIntoView({behavior: 'smooth', block: 'start'});
+    this.activesToogle(activeElement);
+    }
+
+    activesToogle( el: string) {
+      switch (el) {
+        case 'home':
+          this.homeLi.nativeElement.classList.add('active');
+          this.serviciosLi.nativeElement.classList.remove('active');
+          this.descargarLi.nativeElement.classList.remove('active');
+          this.contactLi.nativeElement.classList.remove('active');
+          break;
+        case 'servicios':
+          this.homeLi.nativeElement.classList.remove('active');
+          this.serviciosLi.nativeElement.classList.add('active');
+          this.descargarLi.nativeElement.classList.remove('active');
+          this.contactLi.nativeElement.classList.remove('active');
+          break;
+        case 'descargar':
+          this.homeLi.nativeElement.classList.remove('active');
+          this.serviciosLi.nativeElement.classList.remove('active');
+          this.descargarLi.nativeElement.classList.add('active');
+          this.contactLi.nativeElement.classList.remove('active');
+          break;
+        case 'contact':
+          this.homeLi.nativeElement.classList.remove('active');
+          this.serviciosLi.nativeElement.classList.remove('active');
+          this.descargarLi.nativeElement.classList.remove('active');
+          this.contactLi.nativeElement.classList.add('active');
+          break;
+        default:
+          this.homeLi.nativeElement.classList.add('active');
+          this.serviciosLi.nativeElement.classList.remove('active');
+          this.descargarLi.nativeElement.classList.remove('active');
+          this.contactLi.nativeElement.classList.remove('active');
+          break;
+      }
+    }
 
 }

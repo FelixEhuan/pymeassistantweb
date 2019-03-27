@@ -58,9 +58,9 @@
         }
         &.navbar-shrink {
             border-color: fade-out($gray-darker, .9);
-            background-color: white;
+            background-color: rgba(black,0.7);
             .navbar-brand {
-                color: $gray-darker;
+                color: white;
                 &:hover,
                 &:focus {
                     color: $theme-primary;
@@ -68,7 +68,7 @@
             }
             .navbar-nav > li > a,
             .navbar-nav > li > a:focus {
-                color: $gray-darker;
+                color: white;
                 &:hover {
                     color: $theme-primary;
                 }
