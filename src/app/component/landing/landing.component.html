@@ -2,7 +2,7 @@
     
 <nav Sticky-Element offset="420" class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger">{{title}}</a>
+    <a class="navbar-brand js-scroll-trigger">{{data.titulo}}</a>
     <button #navbar_li class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li #home_li class="nav-item active">
-         <a (click)="scrollToElement(home,'home')" class="letter-color change-color nav-link js-scroll-trigger">Inicio</a>
+         <a (click)="scrollToElement(homee,'homee')" class="letter-color change-color nav-link js-scroll-trigger">Inicio</a>
         </li>
         <li #descargar_li>
           <a (click)="scrollToElement(descargar,'descargar')"  class="letter-color nav-link js-scroll-trigger">Descargar</a>
@@ -26,12 +26,12 @@
   </div>
 </nav>
 
-<header #home class="masthead gradiente-2">
+<header #homee class="masthead gradiente-2">
   <div class="container h-100">
     <div class="row h-100">
       <div class="col-lg-7 my-auto">
         <div class="header-content mx-auto">
-          <h1 class="mb-5">{{home.title}}</h1>
+          <h1 class="mb-5">{{data.secciones.home.titulo}}</h1>
         </div>
       </div>
       <div class="col-lg-5 my-auto">
@@ -40,11 +40,11 @@
             <div class="device">
               <div class="screen">
                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                <img [src]="home.imgdevice" class="img-fluid" alt="">
+                <img [src]="data.secciones.home.imagen" class="img-fluid" alt="">
               </div>
-              <div class="button">
-                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-              </div>
+              <!-- <div class="button">
+              
+              </div> -->
             </div>
           </div>
         </div>
@@ -57,11 +57,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 mx-auto">
-        <h2 class="section-heading">{{download.title}}</h2>
-        <p>{{download.subtitle}}</p>
+        <h2 class="section-heading">{{data.secciones.descargas.titulo}}</h2>
+        <p>{{data.secciones.descargas.subtitulo}}</p>
         <div class="badges">
-          <a class="badge-link" href="#"><img src="assets/img/google-play-badge.svg" alt=""></a>
-          <a class="badge-link" href="#"><img src="assets/img/app-store-badge.svg" alt=""></a>
+          <a class="badge-link" href="{{data.secciones.descargas.botonplay}}"><img src="assets/img/google-play-badge.svg" alt=""></a>
+          <a class="badge-link" href="{{data.secciones.descargas.botonaps}}"><img src="assets/img/app-store-badge.svg" alt=""></a>
         </div>
       </div>
     </div>
@@ -71,8 +71,7 @@
 <section #servicios class="features" id="features">
   <div class="container">
     <div class="section-heading text-center">
-      <h2>{{features.title}}</h2>
-      <p class="text-muted">{{features.subtitle}}</p>
+      <h2>{{data.secciones.servicios.titulo}}</h2>
       <hr>
     </div>
     <div class="row">
@@ -82,11 +81,11 @@
             <div class="device">
               <div class="screen">
                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                <img [src]="features.imgdevice" class="img-fluid" alt="">
+                <img [src]="data.secciones.servicios.imagen" class="img-fluid" alt="">
               </div>
-              <div class="button">
-                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-              </div>
+              <!-- <div class="button">
+               
+              </div> -->
             </div>
           </div>
         </div>
@@ -97,15 +96,15 @@
             <div class="col-lg-6">
               <div class="feature-item">
                 <i class="icon-screen-smartphone text-primary"></i>
-                <h3>{{features.device}}</h3>
-                <p class="text-muted">{{features.devicesub}}</p>
+                <h3>{{data.secciones.servicios.serviciuno}}</h3>
+                <p class="text-muted">{{data.secciones.servicios.subtitulouno}}</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="feature-item">
                 <i class="icon-camera text-primary"></i>
-                <h3>{{features.camera}}</h3>
-                <p class="text-muted">{{features.camerasub}}</p>
+                <h3>{{data.secciones.servicios.serviciodos}}</h3>
+                <p class="text-muted">{{data.secciones.servicios.subtitulodos}}</p>
               </div>
             </div>
           </div>
@@ -113,15 +112,15 @@
             <div class="col-lg-6">
               <div class="feature-item">
                 <i class="icon-present text-primary"></i>
-                <h3>{{features.gift}}</h3>
-                <p class="text-muted">{{features.giftsub}}</p>
+                <h3>{{data.secciones.servicios.serviciotres}}</h3>
+                <p class="text-muted">{{data.secciones.servicios.subtitulotres}}</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="feature-item">
                 <i class="icon-lock-open text-primary"></i>
-                <h3>{{features.lock}}</h3>
-                <p class="text-muted">{{features.locksub}}</p>
+                <h3>{{data.secciones.servicios.serviciocuatro}}</h3>
+                <p class="text-muted">{{data.secciones.servicios.subtitulocuatro}}</p>
               </div>
             </div>
           </div>
@@ -134,7 +133,7 @@
 <section class="cta">
   <div class="cta-content">
     <div class="container">
-      <h2>{{cta.title}}</h2>
+      <h2>{{data.secciones.banner.titulo}}</h2>
     </div>
   </div>
   <div class="overlay"></div>
@@ -142,20 +141,20 @@
 
 <section #contacto class="contact bg-primary" id="contact">
   <div class="container">
-    <h2>{{contact.title}}</h2>
+    <h2>{{data.secciones.contacto.titulo}}</h2>
     <ul class="list-inline list-social">
       <li class="list-inline-item social-twitter">
-        <a href="#">
+        <a href="{{data.secciones.contacto.facebook}}">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
       <li class="list-inline-item social-facebook">
-        <a href="#">
+        <a href="{{data.secciones.contacto.twitter}}">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
       <li class="list-inline-item social-google-plus">
-        <a href="#">
+        <a href="{{data.secciones.contacto.google}}">
           <i class="fab fa-google-plus-g"></i>
         </a>
       </li>
