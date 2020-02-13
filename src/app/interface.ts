@@ -6,6 +6,7 @@ export interface WebData{
     secciones:{
 
         home:{
+            navbar:string;
             titulo:string;
             imagen:string;
         }

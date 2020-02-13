@@ -16,6 +16,7 @@ export class LandingComponent implements OnInit {
     tipo: 6,
     secciones: {
       home: {
+        navbar:"inicio",
         imagen: "https://firebasestorage.googleapis.com/v0/b/pyme-assistant.appspot.com/o/web%2Fuserid%2Fpymeappimagen1?alt=media&token=a8c2361e-2279-4384-9d5a-370e6472a4a9",
         titulo: "pymeassistant",
             },

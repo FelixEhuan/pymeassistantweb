@@ -10,16 +10,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li #home_li class="nav-item active">
-         <a (click)="scrollToElement(homee,'homee')" class="letter-color change-color nav-link js-scroll-trigger">Inicio</a>
+         <a (click)="scrollToElement(homee,'homee')" class="letter-color change-color nav-link js-scroll-trigger">{{data.secciones.home.navbar}}</a>
         </li>
         <li #descargar_li>
-          <a (click)="scrollToElement(descargar,'descargar')"  class="letter-color nav-link js-scroll-trigger">Descargar</a>
+          <a (click)="scrollToElement(descargar,'descargar')"  class="letter-color nav-link js-scroll-trigger">Descarga</a>
         </li>
         <li #servicios_li>
-          <a (click)="scrollToElement(servicios,'servicios')" class="letter-color nav-link js-scroll-trigger">Servicios</a>
+          <a (click)="scrollToElement(servicios,'servicios')" class="letter-color nav-link js-scroll-trigger">{{data.secciones.servicios.titulo}}</a>
         </li>
         <li #contact_li>
-          <a (click)="scrollToElement(contacto,'contact')" class="letter-color nav-link js-scroll-trigger">Contacto</a>
+          <a (click)="scrollToElement(contacto,'contact')" class="letter-color nav-link js-scroll-trigger">Contáctanos</a>
         </li>
       </ul>
     </div>
@@ -60,8 +60,8 @@
         <h2 class="section-heading">{{data.secciones.descargas.titulo}}</h2>
         <p>{{data.secciones.descargas.subtitulo}}</p>
         <div class="badges">
-          <a class="badge-link" href="{{data.secciones.descargas.botonplay}}"><img src="assets/img/google-play-badge.svg" alt=""></a>
-          <a class="badge-link" href="{{data.secciones.descargas.botonaps}}"><img src="assets/img/app-store-badge.svg" alt=""></a>
+          <a class="badge-link" href="{{data.secciones.descargas.botonplay}}"><img src="assets/img/play-store.png" alt=""></a>
+          <a class="badge-link" href="{{data.secciones.descargas.botonaps}}"><img src="assets/img/app-store.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -95,14 +95,14 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="feature-item">
-                <i class="icon-screen-smartphone text-primary"></i>
+                <i class="icon-diamond text-primary"></i>
                 <h3>{{data.secciones.servicios.serviciuno}}</h3>
                 <p class="text-muted">{{data.secciones.servicios.subtitulouno}}</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="feature-item">
-                <i class="icon-camera text-primary"></i>
+                <i class="icon-diamond text-primary"></i>
                 <h3>{{data.secciones.servicios.serviciodos}}</h3>
                 <p class="text-muted">{{data.secciones.servicios.subtitulodos}}</p>
               </div>
@@ -111,14 +111,14 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="feature-item">
-                <i class="icon-present text-primary"></i>
+                <i class="icon-diamond text-primary"></i>
                 <h3>{{data.secciones.servicios.serviciotres}}</h3>
                 <p class="text-muted">{{data.secciones.servicios.subtitulotres}}</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="feature-item">
-                <i class="icon-lock-open text-primary"></i>
+                <i class="icon-diamond text-primary"></i>
                 <h3>{{data.secciones.servicios.serviciocuatro}}</h3>
                 <p class="text-muted">{{data.secciones.servicios.subtitulocuatro}}</p>
               </div>
@@ -155,7 +155,7 @@
       </li>
       <li class="list-inline-item social-google-plus">
         <a href="{{data.secciones.contacto.google}}">
-          <i class="fab fa-google-plus-g"></i>
+          <i class="fab fa-instagram"></i>
         </a>
       </li>
     </ul>
